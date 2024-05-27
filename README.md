@@ -90,7 +90,7 @@ docker-compose up -d
 ### Podgląd endpointów w Swagerze
 Następnie wejdź w zakładke "Porty" i kliknij "Uruchom w przeglądarce".
 W przeglądarce uruchomi sie strone pod postacią np. _https://ominous-space-enigma-rpr5pwp7vgrfgvx-8080.app.github.dev/_
-Dopisz po adresie _/swagger-ui/_ aby zobaczyć dostępne endpointy.  
+Dopisz po adresie _/swagger-ui.html_ aby zobaczyć dostępne endpointy.  
 Konieczne jest również podmienienie w `OpenApiConfig.java` adresu na aktualny.
 
 
