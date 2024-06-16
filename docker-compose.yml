@@ -12,17 +12,24 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=rootpass
   mongo-express:
     image: mongo-express
-    container_name: mongo-express
-    restart: always
-    ports:
-      - 8081:8081
     environment:
-      - ME_CONFIG_MONGODB_ADMINUSERNAME=rootuser
-      - ME_CONFIG_MONGODB_ADMINPASSWORD=rootpass
-      - ME_CONFIG_MONGODB_SERVER=mongodb
+        - ME_CONFIG_MONGODB_SERVER=mongodb
+        - ME_CONFIG_MONGODB_PORT=27017
+        - ME_CONFIG_MONGODB_ENABLE_ADMIN=false
+        - ME_CONFIG_MONGODB_AUTH_DATABASE=admin
+        - ME_CONFIG_MONGODB_AUTH_USERNAME=rootuser
+        - ME_CONFIG_MONGODB_AUTH_PASSWORD=rootpass
+        - ME_CONFIG_BASICAUTH_USERNAME=rootuser
+        - ME_CONFIG_BASICAUTH_PASSWORD=rootpass
+    depends_on:
+        - mongodb
+    ports:
+      - "8081:8081"
 volumes:
   data: {}
 
 networks:
   default:
     name: mongodb_network
+
+

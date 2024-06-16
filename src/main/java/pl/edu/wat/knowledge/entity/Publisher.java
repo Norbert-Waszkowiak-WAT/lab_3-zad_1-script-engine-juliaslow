@@ -4,14 +4,11 @@ import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
+
 @Data
-public class Author{
+public class Publisher{
     @MongoId
     private String id;
-    private String surname;
     private String name;
-
-    @DBRef
-    private Affiliation affiliation;
-    
+    private String location;
 }

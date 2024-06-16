@@ -63,7 +63,7 @@ te uruchamiane na tradycyjnych maszynach wirtualnych.
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 17.0.11-graal
-sdk use java 17.0.11-graal
+ysdk use java 17.0.11-graal
 ```
 
 ## Uruchomienie aplikacji
@@ -126,13 +126,9 @@ for (var i = 0; i < authors.size(); i++) {
     console.log("Updated author " + author.getName() + " " + author.getSurname() + " with new score: " + newScore);
 }
 
-// Zwróć liczbę zmodyfikowanych autorów
-authors.size();
-```
 
 # Zadania
 Wyjątkowo zadanie nie jest automatycznie sprawdzane przez testy jednostkowe.
-
 1. **[12pkt.]** Zaimplementuj/uzupełnij encje zgodnie z umieszczonym poniżej schematem.
 2. **[13pkt.]** Napisz skrypt w pythonie lub bashu, który uzpełni dane w repozytorium aplikacji za pomocą restAPI.
    Łącznie dodaj 100 rekordów różnego typu.
@@ -148,6 +144,5 @@ Wyjątkowo zadanie nie jest automatycznie sprawdzane przez testy jednostkowe.
    metody `getScore(Author)`. Zamieść skrypt w pliku `updateAuthorsScore.js`. Skrypt ma być wykorzystany w endpoincie wystawionym przez `ScriptController`.
 8. **[10pkt.]** Napisz testy jednostkowe dla skryptu `updateAuthorsScore.js`. Rozszerz
    klasę `AbstractContainerBaseTest`, która zapewni Ci dostęp do kontekstu Springa oraz bazy danych.
-
 ![schema.png](schema.png)
 

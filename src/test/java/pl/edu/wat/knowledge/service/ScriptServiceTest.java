@@ -1,14 +1,30 @@
 package pl.edu.wat.knowledge.service;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import pl.edu.wat.knowledge.AbstractContainerBaseTest;
+import pl.edu.wat.knowledge.entity.Author;
 
 
 class ScriptServiceTest extends AbstractContainerBaseTest {
     @Autowired
     ScriptService scriptService;
+    @Autowired
+    private ScoreService scoreService;
+    @Test
+    public void testGetScore() {
+       
+        Author author = authorRepository.findAll().get(0); 
+        System.out.println(author);
+        Integer expectedScore = 0; 
 
+        Integer actualScore = scoreService.getScore(author, 2023); 
+        System.out.println(actualScore);
+
+        assertEquals(expectedScore, actualScore); 
+    }
     @Test
     public void testCalc() {
         String script = """
