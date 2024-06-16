@@ -9,5 +9,6 @@ import pl.edu.wat.knowledge.entity.Author;
 
 @RepositoryRestResource(collectionResourceRel = "articles", path = "articles")
 public interface ArticleRepository extends MongoRepository<Article, String> {
-    List<Article> findByAuthorsPublisherYear(Author author, Integer year);
+   // List<Article> findByAuthorAndYear(Author author, Integer year);
+
 }

@@ -10,5 +10,5 @@ import pl.edu.wat.knowledge.entity.Chapter;
 
 @RepositoryRestResource(collectionResourceRel = "chapters", path = "chapters")
 public interface ChapterRepository extends MongoRepository<Chapter, String> {
-    List<Chapter> findByAuthorsBookYear(Author author, Integer year);
+    //List<Chapter> findByAuthorsBookYear(Author author, Integer year);
 }

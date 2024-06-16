@@ -20,7 +20,7 @@ import java.util.Comparator;
 @Service
 public class ScoreService {
 //Uzupełnij `ScoreService` o metodę `getScore(Author)`, która zwróci punkty autora uzyskane w danym roku.
-    @Autowired
+  /*   @Autowired
     private ArticleRepository articleRepository;
 
     @Autowired
@@ -88,5 +88,5 @@ public class ScoreService {
         }
 
         return score;
-    }
+    }*/
 }
